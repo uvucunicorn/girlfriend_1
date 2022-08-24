@@ -329,7 +329,7 @@ if __name__ == "__main__":
     # 获取accessToken
     accessToken = get_access_token()
     # 接收的用户
-    users = config["user"]
+    users = os.environ["USER_ID"]
     # 传入省份和市获取天气信息
     province = os.environ["province"]
     city = os.environ["city"]
