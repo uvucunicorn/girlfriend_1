@@ -216,12 +216,13 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
     love_days = str(today.__sub__(love_date)).split(" ")[0]
     # 获取所有生日数据
     birthdays = {}
+    template_id = os.environ["TEMPLATE_ID"]
     for k, v in config.items():
         if k[0:5] == "birth":
             birthdays[k] = v
     data = {
         "touser": to_user,
-        "template_id": config["template_id"],
+        "template_id": template_id,
         "url": "http://weixin.qq.com/download",
         "topcolor": "#FF0000",
         "data": {
@@ -330,7 +331,8 @@ if __name__ == "__main__":
     # 接收的用户
     users = config["user"]
     # 传入省份和市获取天气信息
-    province, city = config["province"], config["city"]
+    province = os.environ["province"]
+    city = os.environ["city"]
     weather, max_temperature, min_temperature = get_weather(province, city)
     #获取彩虹屁API
     caihongpi_API=config["caihongpi_API"]
