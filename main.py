@@ -8,6 +8,11 @@ import os
 import http.client, urllib
 import json
 from zhdate import ZhDate
+
+
+app_id = os.environ["APP_ID"]
+app_secret = os.environ["APP_SECRET"]
+
 def get_color():
     # 获取随机颜色
     get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
@@ -17,9 +22,9 @@ def get_color():
 
 def get_access_token():
     # appId
-    app_id = os.environ["APP_ID"]
+    
     # appSecret
-    app_secret = config["app_secret"]
+   
     post_url = ("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={}&secret={}"
                 .format(app_id, app_secret))
     try:
