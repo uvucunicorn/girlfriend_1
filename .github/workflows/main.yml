@@ -23,16 +23,6 @@ jobs:
     - run: pip install -r ./requirements.txt && python ./main.py
 
     env:
-      APP_ID: ${{ secrets.APP_ID }}
-      APP_SECRET: ${{ secrets.APP_SECRET }}
       template_id: ${{secrets.template_id}}
-      love_date: ${{ love_date }}
       province: ${{ secrets.province }}
       city: ${{ secrets.city }}
-      caihongpi_API: ${{ secrets.caihongpi_API }}
-      lizhi_API: ${{ secrets.lizhi_API }}
-      tianqi_API: ${{ secrets.tianqi_API }}
-      Whether_Eng: ${{ secrets.Whether_Eng }}
-      health_API: ${{ secrets.health_API }}
-      lucky_API: ${{ secrets.lucky_API }}
-      astro: ${{ secrets.astro }}
