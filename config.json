@@ -1,5 +1,5 @@
 {"app_id": "$(APP_ID)", 
- "app_secret": "c3f4888fefdb44fb7691e35c04582c28", 
+ "app_secret": "$(APP_SECRET)", 
  "template_id": "BbWn6pznoyHRP-JaUBF4VAGTxhNcB0hLkU5yXfm0CgE", 
  "user": ["oy4Bv59pkwpWaura4R9GmzEqAsvg"], 
  "province": "\u6e56\u5357", 
