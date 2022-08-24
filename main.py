@@ -216,7 +216,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
     love_days = str(today.__sub__(love_date)).split(" ")[0]
     # 获取所有生日数据
     birthdays = {}
-    template_id = os.environ["TEMPLATE_ID"]
+    template_id = os.environ["template_id"]
     for k, v in config.items():
         if k[0:5] == "birth":
             birthdays[k] = v
