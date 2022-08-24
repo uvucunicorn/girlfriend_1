@@ -24,6 +24,5 @@ jobs:
 
     env:
       template_id: ${{secrets.template_id}}
-      USER_ID: ${{secrets.USER_ID}}
       province: ${{ secrets.province }}
       city: ${{ secrets.city }}
